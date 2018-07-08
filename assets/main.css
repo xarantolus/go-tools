@@ -38,18 +38,22 @@ a {
     content: ")";
 }
 
+div {
+    display: block;
+}
+
 .box, .box>* {
     background-color: #484848;
     color: #ddd;
-    width: 95%;
+    width: 100%;
     margin: 0 auto;
     border: 0px;
     text-align: center
 }
 
 .box {
-    border: 3px solid #808080;
-    width: 45%;
+    border: 0.5% solid #808080;
+    width: 47%;
     padding: 1%;
 }
 
