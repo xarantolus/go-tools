@@ -17,8 +17,23 @@ function dateInput() {
 
 
 function setEventListeners() {
-    document.getElementById('date-left').oninput = dateInput;
+    var dl = document.getElementById('date-left');
+    dl.addEventListener("input", dateInput);
+
+    var rl = document.getElementById('date-right');
+    rl.addEventListener('click', copyDate);
 }
 
+function copyDate() {
+    var copyText = document.getElementById('date-right');
+    if (copyText.value == "Copied!") {
+        return 
+    }
+    copyText.select();
+    document.execCommand("copy");
+
+    copyText.value = "Copied!"
+    setTimeout(dateInput, 450);
+}
 
 setEventListeners();
